@@ -7,3 +7,14 @@ MIDL 2022
 ![image](https://github.com/HuaqingHe/JOINED/blob/main/Figs/fig1_pipeline.png)
 
 ## Dependencies
+### Packages
+* Python 3.9
+* PyTorch >= 1.8.0
+* Numpy
+* Sklearn
+* Segmentation Models Pytorch
+* TensorboardX
+* OpenCV
+* numpy
+* Tqdm
+* surface-distance
