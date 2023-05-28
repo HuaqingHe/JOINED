@@ -7,7 +7,7 @@ import segmentation_models_pytorch as smp
 from tqdm import tqdm
 from torch.nn import functional as F
 from dataset import DatasetImageMaskContourDist, mean_and_std
-from losses import *
+from losses import LossPsiNet, LossDMTN, LossDCAN, LossUNet, train_DiceLoss_weighted
 from models import UNet, UNet_DCAN, UNet_DMTN, PsiNet, UNet_ConvMCD, UNetPP_doublesmp
 from torch.utils.data import DataLoader
 
