@@ -16,15 +16,16 @@ Please prepare an environment with python >= 3.7, and the use the command ```pip
 
 ### 3. Train/Test
 
-* Python 3.9
-* PyTorch >= 1.8.0
-* Albumentations
-* Numpy
-* Scipy
-* Sklearn
-* Segmentation Models Pytorch
-* TensorboardX
-* OpenCV
-* Numpy
-* Tqdm
-* surface-distance
+* Run the train script on GAMMA dataset. The batch size can be reduce to 8 or 4 to save memory (please also decrease the base_lr linearly), and both can reach similar performance. First coarse stage :
+```bash 
+cd Coarse
+bash train_smp.sh
+```
+After Coarse stage, and get the cropped data, run the fine stage :
+```bash
+cd Fine
+bash train.sh
+```
+
+* Run the test script on GAMMA dataset.
+First
