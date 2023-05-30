@@ -8,7 +8,7 @@ MIDL 2022
 
 ## Usage
 ### 1. Prepare data
-Please go to "./Coarse/README.md" and "./Fine/README.md" for details.
+Please go to "./Dataset/README.md" for details.
 
 
 ### 2. Environment
@@ -21,11 +21,30 @@ Please prepare an environment with python >= 3.7, and the use the command ```pip
 cd Coarse
 bash train_smp.sh
 ```
-After Coarse stage, and get the cropped data, run the fine stage :
+After Coarse stage, you need to run the `eval.sh` to get the cropped data and then run the fine stage :
 ```bash
 cd Fine
 bash train.sh
 ```
 
 * Run the test script on GAMMA dataset.
-First
+First coarse stage :
+```bash 
+cd Coarse
+bash eval.sh
+```
+After Coarse stage, and get the cropped data, run the fine stage :
+```bash
+cd Fine
+bash eval.sh
+```
+## Citations
+```bibtex
+@inproceedings{he2022joined,
+    title={{JOINED}: Prior Guided Multitask Learning for Joint Optic Disc/Cup Segmentation and Fovea Detection},
+    author={Huaqing He and Li Lin and Zhiyuan Cai and Xiaoying Tang},
+    booktitle={Medical Imaging with Deep Learning},
+    year={2022},
+    url={https://openreview.net/forum?id=HU6-t9oKvRW}
+}
+```
